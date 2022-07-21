@@ -13,7 +13,7 @@
 
 using namespace std;
 
-int used[10];
+int used[12];
 int x = 0;
 
 Question Active("Question", "Good", "One", "Two", "Three", "Four", "Number", "Type");
@@ -32,7 +32,7 @@ int get_question()
             Sleep(900);
         }
         srand((unsigned)time(NULL));
-        int random = (rand() % 10);
+        int random = rand();
 
         do
         {
@@ -62,7 +62,7 @@ int get_question()
                 id_in_int = stoi(id);
             }
             int exist = 1;
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 12; i++)
             {
                 if (used[i] == id_in_int)
                 {
